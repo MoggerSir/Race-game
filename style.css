@@ -1,0 +1,196 @@
+:root {
+    /* Fondos */
+    --color1: #0B0E14;   /* Negro azulado profundo (fondo principal) */
+    --color2: #141A26;   /* Paneles / carriles */
+
+    /* Acentos principales */
+    --color3: #F9A826;   /* Naranja Goku (energía / ki / botones importantes) */
+    --color4: #3AA0FF;   /* Azul ki / líneas / separadores */
+
+    /* Secundarios */
+    --color5: #E6E9F2;   /* Texto claro / números */
+    --color6: #FF4D4D;   /* Rojo combate / alerta / ganador */
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--color1);
+}
+h2{
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    margin: 0;
+    color: var(--color6);
+    background-color: var(--color1);
+    height: 1.5em;
+}
+
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+
+}
+
+.goku{
+    width: 10.5em;
+    left: 0;
+
+}
+
+#goku1 {
+    position: relative;
+    transition: left 1.2s ease-in-out;
+    left: 0;
+    
+}
+
+#goku2 {
+    position: relative;
+    transition: left 1.2s ease-in-out;
+    left: 0;
+}
+#goku3 {
+    position: relative;
+    transition: left 1.2s ease-in-out;
+    left: 0;
+}
+#goku4 {
+    position: relative;
+    transition: left 1.2s ease-in-out;
+    left: 0;
+}
+    
+
+#contenedor0 {
+    background-color: var(--color2);
+    width: 100%;
+    height: 15em;
+    transition: height 1s ease-in-out;
+    margin-bottom: 0;
+}
+
+#contenedor1 {
+    background-color: var(--color2);
+    width: 100%;
+    height: 15em;
+    transition: height 1s ease-in-out;
+    
+}
+#contenedor2 {
+    background-color: var(--color2);
+    width: 100%;
+    height: 15em;
+    transition: height 1s ease-in-out;
+}
+#contenedor3 {
+    background-color: var(--color2);
+    width: 100%;
+    height: 15em;
+    transition: height 1s ease-in-out;
+}
+
+.linea{
+    position: absolute;
+    background-color: var(--color3);
+    width: 5px;
+    height: 60em;
+    left: 1000px;
+
+}
+.contador{
+    position: relative;
+    background-color: var(--color1);
+    color: var(--color3);
+    width: 100px;
+    left: 1200px;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50px);
+    transition:  0.5s ease-in-out;
+    z-index: 10000;
+}
+
+.esfera{
+    width: 4em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 1218px;
+    transform: translateY(-10em);
+}
+
+.nab{
+    padding: 2em;
+    background-color: #0F1F2B;
+    max-width: 100%;
+    height: 7em;
+    display: flex;
+    flex-direction: column;
+    columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    color: var(--color6);
+    text-shadow: 0 0 10px var(--color6);
+}
+
+.boton {
+    background-color: var(--color3);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+.boton:hover{ 
+    background-color: var(--color4);
+}
+
+.botones{
+    display: flex;
+    gap: 10px;
+}
+
+
+.ganador{
+    position: absolute;
+    background-color: #b86711fc;
+    color: var(--color5);
+    box-shadow: 0 0 10px #76440dfc, 0 0 20px #76440dfc, 0 0 30px #76440dfc;
+    width: 200px;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(300%, -995%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    z-index: 10000;}
+
+    .nabIputs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+
+.inputNombre{
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+    height: 2em;
+}
