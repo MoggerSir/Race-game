@@ -1,5 +1,6 @@
 (()=>{
 const nombres = ['', '', '', ''];
+
     const CrearElemento = (etiqueta, objeto = {})=>{
         const creador = document.createElement(etiqueta);
         Object.entries(objeto).forEach(([tiket, valor])=>{
@@ -25,10 +26,10 @@ const nombres = ['', '', '', ''];
 
     }
 
-    const meta = 1000;
-    let int = 0
-    const sumas = [0, 0, 0, 0];
-    const ganador = document.querySelector('.ganador'); 
+    const meta      = 1000;
+    const sumas     = [0, 0, 0, 0];
+    const ganador   = document.querySelector('.ganador'); 
+    let   int       = 0
 
     const moverMoto = (goku, index, interval) => {
         if (sumas[index] >= meta) {
@@ -42,7 +43,7 @@ const nombres = ['', '', '', ''];
         goku.style.left = sumas[index] + 'px';
 
         for (let i = 0; i < 4; i++) {
-            document.querySelector(`#ContMotos${i}`).textContent = sumas[i];
+            document.querySelector(`#ContMotos${index}`).textContent = sumas[index];
         }
         if (sumas[index] >= meta && int === 0) {
             int++;
@@ -60,13 +61,16 @@ const nombres = ['', '', '', ''];
         }
     };
 
-    const botonInicio= document.querySelector('#inicio')
+    const botonInicio   = document.querySelector('#inicio')
     const botonReinicio = document.querySelector('#reiniciar')
-    const intervals = [];
-    const goku1 = document.querySelectorAll('.goku');
-    const inputNombre = document.querySelectorAll('.inputNombre');
+    const goku1         = document.querySelectorAll('.goku');
+    const inputNombre   = document.querySelectorAll('.inputNombre');
+    const intervals     = [];
 
     botonInicio.addEventListener('click', ()=> {
+
+        intervals.forEach((iv) => clearInterval(iv));
+        intervals.length = 0;
 
         goku1.forEach((goku, index) => {
             const interval = setInterval(() => moverMoto(goku, index, interval), 500);
@@ -93,9 +97,8 @@ const nombres = ['', '', '', ''];
 
     botonReinicio.addEventListener('click', ()=>{
     goku1.forEach((gokus) => {gokus.src = '/img/inicio.png';})
-    goku1.forEach((gokus) => {gokus.src = '/img/inicio.png';})
     ganador.textContent = `El ganador es`;
-    sumas[0,1,2,3] = 0;
+    sumas.fill(0);
     intervals.forEach((interval) => clearInterval(interval));
     int = 0
     goku1.forEach((goku => {
