@@ -2,6 +2,8 @@
 
 Este proyecto es una aplicación web interactiva que simula una carrera entre diferentes versiones de Goku. Los usuarios pueden personalizar los nombres de los corredores y observar cómo avanzan aleatoriamente hacia una meta definida.
 
+![Carreras Clandestinas de Gokus Preview](img/fotoDelReadme.png)
+
 ## Tecnologías Utilizadas
 
 - **HTML5**: Estructura semántica del sitio configurada en español (`lang="es"`).
